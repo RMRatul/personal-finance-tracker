@@ -32,7 +32,7 @@ def divider(char="─", width=50):
     print(char * width)
 
 def prompt(text:str) -> str:
-    return input(f" {text}; ").strip()
+    return input(f" {text}: ").strip()
 
 def show_alerts(alert: Alert):
     messages = alert.check_budget()
@@ -80,9 +80,9 @@ def main_menu(tracker: ExpenseTracker, alert: Alert):
     print(f"  Hello, {tracker.user.name}! 👋   {datetime.now().strftime('%d %b %Y')}")
     divider()
     print(f"  Budget  : [{bar}] {pct:.1f}%")
-    print(f"  Spent   : ৳{spent:.2f}  /  ৳{budget:.2f}")
-    print(f"  Income  : ৳{income:.2f}")
-    print(f"  Balance : ৳{tracker.balance_this_month():.2f}")
+    print(f"  Spent   : ৳ {spent:.2f}  /  ৳{budget:.2f}")
+    print(f"  Income  : ৳ {income:.2f}")
+    print(f"  Balance : ৳ {tracker.balance_this_month():.2f}")
     divider()
  
     show_alerts(alert)
@@ -214,7 +214,7 @@ def delete_transaction_menu(tracker: ExpenseTracker):
             return
         if 1 <= choice <= len(all_txns):
             t = all_txns[choice - 1]
-            confirm = prompt(f"Delete '{t.note}' ৳{t.amount:.2f}? (y/n)")
+            confirm = prompt(f"Delete '{t.note}' ৳ {t.amount:.2f}? (y/n)")
             if confirm.lower() == "y":
                 if tracker.delete_transaction(t.id):
                     print("  ✅ Deleted successfully!")

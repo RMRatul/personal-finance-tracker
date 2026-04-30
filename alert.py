@@ -41,4 +41,4 @@ class Alert:
             "transport": f"🚗 ৳ {top_amount:.2f} on transport. Try carpooling or public transit!",
             }
 
-            return tips.get(top_category,f"📊 Top spending: {top_category} (৳ {top_amount:.2f}). Keep an eye on it!")
+            return tips.get(top_category,f"📊 Top spending: {top_category} ( ৳ {top_amount:.2f}). Keep an eye on it!")

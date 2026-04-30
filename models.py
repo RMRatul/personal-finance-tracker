@@ -8,7 +8,7 @@ class Category:
         "bills": "💡 Bills",
         "entertainment": "🎮 Entertainment",
         "health": "💊 Health",
-        "shopping": "🛍️ Shopping",
+        "shopping": "🛍️  Shopping",
         "education": "📚 Education",
         "other": "📦 Other",
     }

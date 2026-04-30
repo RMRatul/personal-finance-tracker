@@ -32,7 +32,7 @@ class FileManager:
         except Exception as e:
             print(f"Error loading user: {e}")
             return None
-        def user_exists(self) -> bool:
+    def user_exists(self) -> bool:
          return os.path.exists(self.USER_FILE)
         
 # ------------------------ Transactions -------------------------------
